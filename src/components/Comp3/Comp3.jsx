@@ -1,13 +1,18 @@
+import { useState } from "react";
 import "./assets/Comp3.css";
 import { Chart } from "react-google-charts";
 
 const Comp3 = () => {
 
+    const [percent, setPercent] = useState(null);
+    const [percent_vis, set_percent_vis] = useState([false, false, false, false, false, false, false, false, false, false, false, false]);
+
     const bar_data = [
         {month: "Jan", percent: 100},
         {month: "Feb", percent: 90},
         {month: "Mar", percent: 70},
-        {month: "Apr", percent: 50},
+        {month: "Apr", percent: 70},
+        {month: "May", percent: 50},
         {month: "Jun", percent: 60},
         {month: "Jul", percent: 80},
         {month: "Aug", percent: 40},
@@ -30,8 +35,24 @@ const Comp3 = () => {
                 <p className="section_type">Overview</p>
                 <p className="section_desc">Monthly collection</p>
                 <div className="bar">
-                    {bar_data.map((index) => {
-                        return <div className="curr_bar">
+                    {bar_data.map((index, num) => {
+                        return <div 
+                            className="curr_bar"
+                            onMouseEnter={() => {
+                                setPercent(index.percent);
+                                const temp = percent_vis;
+                                temp[num] = true;
+                                set_percent_vis(temp)
+                            }}    
+
+                            onMouseLeave={() => {
+                                setPercent(null);
+                                const temp = percent_vis;
+                                temp[num] = false;
+                                set_percent_vis(temp)
+                            }}
+                        >
+                            {(percent && percent_vis[num] ) && <p className="message">{percent}%</p>}
                             <div className="actual_bar_container">
                                 <div className="actual_bar" style={{height: index.percent + '%'}}></div>
                             </div>
