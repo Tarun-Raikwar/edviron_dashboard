@@ -1,0 +1,12 @@
+.dashboard{
+    background-color: #F0F0F0;
+    width: 100%;
+    padding: 30px;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.title{
+    font-weight: bold;
+    padding-bottom: 20px;
+}

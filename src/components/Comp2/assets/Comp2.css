@@ -1,0 +1,27 @@
+.comp2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.comp21{
+    padding: 10px 20px;
+    width: 24%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.comp_type{
+    font-size: 14px;
+    color: #ACACAC;
+}
+
+.desc{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.desc span{
+    font-size: 10px;
+    font-weight: lighter;
+}

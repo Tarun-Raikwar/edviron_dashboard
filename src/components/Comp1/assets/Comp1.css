@@ -1,0 +1,41 @@
+.comp1{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.comp11{
+    display: flex;
+    width: 33%;
+    padding: 0px 20px;
+    /* justify-content: center; */
+}
+
+.middle{
+    border-left: 2px solid rgb(230 229 229);
+    border-right: 2px solid rgb(230 229 229);
+}
+
+.comp11 img{
+    height: 60px;
+    width: 60px;
+}
+
+.side_info{
+    padding-left: 10px;
+}
+
+.p1{
+    font-size: 14px;
+    color:#ACACAC;
+}
+
+.p2{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.p3{
+    font-size: 10px;
+}
